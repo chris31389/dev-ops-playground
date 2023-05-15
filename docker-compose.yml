@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  footballStatsWebApi:
+    image: ${DOCKER_REGISTRY-}football-stats-web-api
+    build:
+      context: .
+      dockerfile: src/FootballStats.WebApi/Dockerfile

@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  footballStatsWebApi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80;http://+:8080
+      - ASPNETCORE_MANAGEMENTPORT=8080
+    ports:
+      - "5002:80"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    networks:
+      - backend
+
+
+networks:
+  backend:
+    driver: bridge
