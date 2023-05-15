@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FootballStats.WebApi/FootballStats.WebApi.csproj", "FootballStats.WebApi/"]
-RUN dotnet restore "FootballStats.WebApi/FootballStats.WebApi.csproj"
+COPY ["src/FootballStats.WebApi/FootballStats.WebApi.csproj", "src/FootballStats.WebApi/"]
+RUN dotnet restore "src/FootballStats.WebApi/FootballStats.WebApi.csproj"
 COPY . .
-WORKDIR "/src/FootballStats.WebApi"
+WORKDIR "/src/src/FootballStats.WebApi"
 RUN dotnet build "FootballStats.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
