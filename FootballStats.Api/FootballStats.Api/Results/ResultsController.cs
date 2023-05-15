@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace FootballStats.Api.Controllers;
+namespace FootballStats.Api.Results;
 
 [ApiController]
 [Route("v1/results")]

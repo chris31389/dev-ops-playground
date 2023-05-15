@@ -1,4 +1,4 @@
-namespace FootballStats.Api.Controllers;
+namespace FootballStats.Api.Results;
 
 public class FootballResult
 {
