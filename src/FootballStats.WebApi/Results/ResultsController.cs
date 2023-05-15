@@ -24,6 +24,7 @@ public class ResultsController : ControllerBase
         "Manchester United",
         "Newcastle",
         "Nottingham",
+        "Southampton",
         "Tottenham",
         "West Ham",
         "Wolves"
